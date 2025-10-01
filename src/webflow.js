@@ -1,12 +1,7 @@
-/**
- * Task 10: Create a Band Name Generator
- */
-
-// 1. Declare a function named generateBandName that takes two arguments: clothingColor and lastFoodEaten.
-// 2. In the function, declare a variable named bandName and assign it to an initial value of an empty string.
-// 3. Using string concatenation, assign bandName to the string "The " plus the clothingColor and lastFoodEaten variables.
-// 4. Ensure the first letter of each word is capitalized.
-// 5. Return the bandName variable.
+const el_clothingColor = document.querySelector("#clothing-color");
+const el_food = document.querySelector("#food");
+const el_submit = document.querySelector("#submit-button");
+const el_bandName = document.querySelector("#band-name-text");
 
 function generateBandName(clothingColor, lastFoodEaten) {
     let bandName = "";
@@ -30,3 +25,13 @@ function generateBandName(clothingColor, lastFoodEaten) {
 
     return bandName;
 }
+
+el_submit.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    el_bandName.textContent = generateBandName(
+        el_clothingColor.value,
+        el_food.value
+    );
+});
