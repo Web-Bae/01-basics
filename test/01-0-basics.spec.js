@@ -83,7 +83,7 @@ describe("JavaScript Basics Assignment", function () {
       logMultiplication();
       logDivision();
       expect(console.log).toHaveBeenCalledWith(15);
-      expect(console.log).toHaveBeenCalledWith(5);
+      expect(console.log).toHaveBeenCalledWith(-5);
       expect(console.log).toHaveBeenCalledWith(50);
       expect(console.log).toHaveBeenCalledWith(0.5);
     });
